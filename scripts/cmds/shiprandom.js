@@ -7,6 +7,7 @@ module.exports = {
   config: {
     name: "shiprandom",
     aurthor:"zach",
+    countdown: "20",
      role: 0,
     shortDescription: " ",
     longDescription: "",
