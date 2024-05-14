@@ -74,4 +74,21 @@ module.exports = {
 
     var sex = await data[id].gender;
     var gender = sex == 2 ? "Male🧑" : sex == 1 ? "Female👩‍ " : "Tran Duc Bo";
-                                        
+    var one = senderID, two = id;
+    return this.makeImage({one, two}).then(async pathImg => {
+      var message = {
+        body: `💘${namee} paired with ${name} ${gender}💘\n\nTag : ${arraytag.map(tag => `@${tag.tag} `).join("")}`,
+        mentions: arraytag,
+        attachment: fs.createReadStream(pathImg),
+      };
+      api.sendMessage(message, threadID, async () => {
+        try {
+          fs.unlinkSync(pathImg);
+        } catch (e) {
+          console.log(e);
+        }
+      }, messageID);
+      return;
+    }).catch(e => console.log(e));
+  },
+};
