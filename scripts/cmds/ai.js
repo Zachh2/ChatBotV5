@@ -55,8 +55,8 @@ module.exports = {
 
       const loadingMessage = getLang("loading");
       const loadingReply = await message.reply(loadingMessage);
-      const url = "https://hercai.onrender.com/v3/hercai"; // Replace with the new API endpoint
-      const response = await axios.get(`${url}?question=${encodeURIComponent(prompt)}`);
+      const url = "https://openaikey-x20f.onrender.com/api"; // Replace with the new API endpoint
+      const response = await axios.get(`${url}?prompt=${encodeURIComponent(prompt)}`);
 
       if (response.status !== 200 || !response.data) {
         throw new Error('Invalid or missing response from API');

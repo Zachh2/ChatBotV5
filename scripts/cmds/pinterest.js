@@ -34,7 +34,7 @@ module.exports = {
       let numberSearch = parseInt(keySearch.split("-").pop()) || 1;
       numberSearch = Math.min(Math.max(numberSearch, 1), 9);
 
-      const apiUrl = `https://api-samirxyz.onrender.com/api/Pinterest?query=${encodeURIComponent(
+      const apiUrl = `https://gpt4withcustommodel.onrender.com/api/pin?title=${encodeURIComponent(
         keySearchs
       )}&number=${numberSearch}&apikey=global`;
 
