@@ -1,81 +1,85 @@
 module.exports = {
-    config: {
-      name: "slot",
-      version: "1.0",
-      author: "OtinXSandip",
-      shortDescription: {
-        en: "Slot game",
-      },
-      longDescription: {
-        en: "Slot game.",
-      },
-      category: "Game",
-    },
-    langs: {
-      en: {
-        invalid_amount: "Enter a valid and positive amount to have a chance to win double",
-        not_enough_money: "Check your balance if you have that amount",
-        spin_message: "Spinning...",
-        win_message: "You won $%1, buddy!",
-        lose_message: "You lost $%1, buddy.",
-        jackpot_message: "Jackpot! You won $%1 with three %2 symbols, buddy!",
-      },
-    },
-    onStart: async function ({ args, message, event, envCommands, usersData, commandName, getLang }) {
-      const { senderID } = event;
-      const userData = await usersData.get(senderID);
-      const amount = parseInt(args[0]);
-  
-      if (isNaN(amount) || amount <= 0) {
-        return message.reply(getLang("invalid_amount"));
-      }
-  
-      if (amount > userData.money) {
-        return message.reply(getLang("not_enough_money"));
-      }
-  
-      const slots = ["💚", "💛", "💙", "💛", "💚", "💙", "💙", "💛", "💚"];
-      const slot1 = slots[Math.floor(Math.random() * slots.length)];
-      const slot2 = slots[Math.floor(Math.random() * slots.length)];
-      const slot3 = slots[Math.floor(Math.random() * slots.length)];
-  
-      const winnings = calculateWinnings(slot1, slot2, slot3, amount);
-      const loadingMessage = getLang("spin_message");
-       
+  config: {
+    name: "slot",
+    version: "1.1",
+    author: "Kshitiz x Gojo",
+    role: 0,
+    shortDescription: "Play a slot game",
+    longDescription: "Play a slot game.",
+    category: "game",
+    guide: {
+      en: "{p}slot {money} / reply to gift box by number"
+    }
+  },
 
-      await usersData.set(senderID, {
-        money: userData.money + winnings,
-        data: userData.data,
+  onStart: async function ({ args, message, event, api, usersData }) {
+    try {
+      const amount = parseInt(args[0]);
+      if (isNaN(amount) || amount <= 0) {
+        return message.reply("Please provide a valid amount of money.");
+      }
+
+      const senderID = event.senderID;
+
+      const userData = await usersData.get(senderID);
+
+      if (amount > userData.money) {
+        return message.reply("You don't have enough money to play this game.");
+      }
+
+      const sentMessage = await message.reply("🎁🎁🎁");
+
+      const emojis = ['💣', '💣', '💎'];
+      emojis.sort(() => Math.random() - 0.5); 
+
+      const shuffledEmojis = emojis.join('');
+
+      const gemPosition = emojis.indexOf('💎');
+
+      global.GoatBot.onReply.set(sentMessage.messageID, {
+        commandName: "slot",
+        messageID: sentMessage.messageID,
+        correctAnswer: gemPosition,
+        amount: amount,
+        senderID: senderID
       });
-  
-      const messageText = getSpinResultMessage(slot1, slot2, slot3, winnings, getLang);
-  
-      return  reply.message(messageText, loadingReply.messageID);
-    },
-  };
-  
-  function calculateWinnings(slot1, slot2, slot3, betAmount) {
-    if (slot1 === "💚" && slot2 === "💚" && slot3 === "💚") {
-      return betAmount * 10;
-    } else if (slot1 === "💛" && slot2 === "💛" && slot3 === "💛") {
-      return betAmount * 5;
-    } else if (slot1 === slot2 && slot2 === slot3) {
-      return betAmount * 3;
-    } else if (slot1 === slot2 || slot1 === slot3 || slot2 === slot3) {
-      return betAmount * 2;
-    } else {
-      return -betAmount;
+
+    } catch (error) {
+      console.error("Error in slot command:", error);
+      message.reply("An error occurred.");
+    }
+  },
+
+  onReply: async function ({ message, event, Reply, api, usersData }) {
+    try {
+      if (!event || !message || !Reply) return; 
+      const userAnswer = event.body.trim();
+
+      if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > 3) {
+        return message.reply("Please reply with a number between 1 and 3.");
+      }
+
+      const gemPosition = Reply.correctAnswer;
+      const chosenPosition = parseInt(userAnswer) - 1; 
+
+      const senderID = Reply.senderID;
+      const userData = await usersData.get(senderID);
+
+      if (chosenPosition === gemPosition) {
+        const winnings = Reply.amount * 2;
+        await usersData.set(senderID, { money: userData.money + winnings }); 
+        await message.reply(`Congratulations! You won ${winnings} coins.`);
+      } else {
+        const lostAmount = Reply.amount;
+        await usersData.set(senderID, { money: userData.money - lostAmount });
+        await message.reply(`Sorry, you lost.${lostAmount}.`);
+      }
+
+      const emojis = ['💣', '💣', '💎'];
+      const revealedEmojis = emojis.map((emoji, index) => (index === gemPosition) ? '💎' : '💣').join('');
+      await api.editMessage(revealedEmojis, Reply.messageID);
+    } catch (error) {
+      console.error("Error while handling user reply:", error);
     }
   }
-  
-  function getSpinResultMessage(slot1, slot2, slot3, winnings, getLang) {
-    if (winnings > 0) {
-      if (slot1 === "💙" && slot2 === "💙" && slot3 === "💙") {
-        return getLang("jackpot_message", winnings, "💙");
-      } else {
-        return getLang("win_message", winnings) + `\[ ${slot1} | ${slot2} | ${slot3} ]`;
-      }
-    } else {
-      return getLang("lose_message", -winnings) + `\[ ${slot1} | ${slot2} | ${slot3} ]`;
-    }
-          }
+};
