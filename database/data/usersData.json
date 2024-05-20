@@ -1,0 +1,315 @@
+[
+  {
+    "userID": "100072403222845",
+    "name": "Patrick Señaris",
+    "gender": 2,
+    "vanity": "",
+    "exp": 10,
+    "money": 30423730000,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T02:17:29.789Z",
+    "updatedAt": "2024-05-20T09:00:07.201Z"
+  },
+  {
+    "userID": "61552268287477",
+    "name": "Zyx Shane",
+    "gender": 1,
+    "vanity": "",
+    "exp": 10,
+    "money": 50,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T02:17:30.169Z",
+    "updatedAt": "2024-05-20T06:03:44.790Z"
+  },
+  {
+    "userID": "100064763179341",
+    "name": "ナヴェア ザカリー",
+    "gender": 2,
+    "vanity": "zachary.pnaveax",
+    "exp": 10,
+    "money": 1039290000,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T02:17:30.357Z",
+    "updatedAt": "2024-05-20T07:04:06.813Z"
+  },
+  {
+    "userID": "100052333236422",
+    "name": "Prince Howard M. Agcaoili",
+    "gender": 2,
+    "vanity": "princehoward.agcaoili",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T03:03:46.788Z",
+    "createdAt": "2024-05-20T03:03:46.788Z"
+  },
+  {
+    "userID": "61555239801390",
+    "name": "Vin Arcilla",
+    "gender": 2,
+    "vanity": "",
+    "exp": 10,
+    "money": 100,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T03:04:34.604Z",
+    "updatedAt": "2024-05-20T03:07:25.217Z"
+  },
+  {
+    "userID": "100025309082048",
+    "name": "Milion Ajednem",
+    "gender": 2,
+    "vanity": "mico.milionmcabate",
+    "exp": 10,
+    "money": 969040000,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T03:05:42.277Z",
+    "updatedAt": "2024-05-20T08:56:39.798Z"
+  },
+  {
+    "userID": "100070224684454",
+    "name": "Caleb Kalel Canoy",
+    "gender": 2,
+    "vanity": "",
+    "exp": 10,
+    "money": 100,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T03:05:53.022Z",
+    "updatedAt": "2024-05-20T03:07:03.237Z"
+  },
+  {
+    "userID": "61559671797977",
+    "name": "ChatBot Mèssenger",
+    "gender": 2,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T03:06:32.301Z",
+    "createdAt": "2024-05-20T03:06:32.301Z"
+  },
+  {
+    "userID": "100012598593392",
+    "name": "Zyx Jomar",
+    "gender": 2,
+    "vanity": "zyx.jomar",
+    "exp": 10,
+    "money": 1000,
+    "banned": {},
+    "settings": {},
+    "data": {
+      "lastTimeGetReward": "20/05/2024"
+    },
+    "createdAt": "2024-05-20T03:10:57.720Z",
+    "updatedAt": "2024-05-20T08:34:56.090Z"
+  },
+  {
+    "userID": "100078774525045",
+    "name": "Rap Deroca",
+    "gender": 2,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T03:14:46.717Z",
+    "createdAt": "2024-05-20T03:14:46.717Z"
+  },
+  {
+    "userID": "61558537565000",
+    "name": "Brian Katsumi",
+    "gender": 2,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T03:14:59.868Z",
+    "createdAt": "2024-05-20T03:14:59.868Z"
+  },
+  {
+    "userID": "100004798267975",
+    "name": "Tyron Rey Bardiano",
+    "gender": 2,
+    "vanity": "tyronrey.bardiano.1",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T03:25:42.286Z",
+    "createdAt": "2024-05-20T03:25:42.286Z"
+  },
+  {
+    "userID": "100075707214790",
+    "name": "Carl Jhames Coruña",
+    "gender": 2,
+    "vanity": "cjkokel",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T05:25:15.291Z",
+    "createdAt": "2024-05-20T05:25:15.291Z"
+  },
+  {
+    "userID": "100013252321776",
+    "name": "Jad Daimond Millare",
+    "gender": 2,
+    "vanity": "jaddaimond.millare",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T05:26:07.308Z",
+    "createdAt": "2024-05-20T05:26:07.308Z"
+  },
+  {
+    "userID": "100077991635401",
+    "name": "Jasper Utot",
+    "gender": 2,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T05:40:19.392Z",
+    "createdAt": "2024-05-20T05:40:19.392Z"
+  },
+  {
+    "userID": "100084388362405",
+    "name": "Louise",
+    "gender": 1,
+    "vanity": "ilouxise",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T05:46:45.538Z",
+    "createdAt": "2024-05-20T05:46:45.538Z"
+  },
+  {
+    "userID": "100036473922470",
+    "name": "Jjay Agbanlog",
+    "gender": 2,
+    "vanity": "jjay.agbanlog",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T06:31:27.889Z",
+    "createdAt": "2024-05-20T06:31:27.889Z"
+  },
+  {
+    "userID": "100090999526738",
+    "name": "Yang Dump",
+    "gender": 1,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T06:59:27.095Z",
+    "createdAt": "2024-05-20T06:59:27.095Z"
+  },
+  {
+    "userID": "61550649216640",
+    "name": "Shane Ingalla",
+    "gender": 1,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T07:45:54.980Z",
+    "createdAt": "2024-05-20T07:45:54.980Z"
+  },
+  {
+    "userID": "100066159462492",
+    "name": "Vinzons Writers",
+    "gender": 2,
+    "vanity": "vin.airos.5203",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T08:05:17.621Z",
+    "createdAt": "2024-05-20T08:05:17.621Z"
+  },
+  {
+    "userID": "61556001372126",
+    "name": "Ero Ra",
+    "gender": 1,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T08:14:21.880Z",
+    "createdAt": "2024-05-20T08:14:21.880Z"
+  },
+  {
+    "userID": "100015479555502",
+    "name": "Beatriz Padua",
+    "gender": 1,
+    "vanity": "trizx.bea",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T08:14:29.045Z",
+    "createdAt": "2024-05-20T08:14:29.045Z"
+  },
+  {
+    "userID": "100075356840563",
+    "name": "Zuri Valbuena",
+    "gender": 2,
+    "vanity": "",
+    "exp": 0,
+    "money": 0,
+    "banned": {},
+    "settings": {},
+    "data": {},
+    "updatedAt": "2024-05-20T08:39:57.236Z",
+    "createdAt": "2024-05-20T08:39:57.236Z"
+  }
+]
