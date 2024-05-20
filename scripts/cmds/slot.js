@@ -29,12 +29,12 @@ module.exports = {
 
       const sentMessage = await message.reply("🎁🎁🎁");
 
-      const emojis = ['💣', '💣', '💎'];
+      const emojis = ['💣', '🤍', '💣'];
       emojis.sort(() => Math.random() - 0.5); 
 
       const shuffledEmojis = emojis.join('');
 
-      const gemPosition = emojis.indexOf('💎');
+      const gemPosition = emojis.indexOf('🤍');
 
       global.GoatBot.onReply.set(sentMessage.messageID, {
         commandName: "slot",
@@ -75,8 +75,8 @@ module.exports = {
         await message.reply(`Sorry, you lost.${lostAmount}.`);
       }
 
-      const emojis = ['💣', '💣', '💎'];
-      const revealedEmojis = emojis.map((emoji, index) => (index === gemPosition) ? '💎' : '💣').join('');
+      const emojis = ['💣', '🤍', '💣'];
+      const revealedEmojis = emojis.map((emoji, index) => (index === gemPosition) ? '💣' : '🤍').join('');
       await api.editMessage(revealedEmojis, Reply.messageID);
     } catch (error) {
       console.error("Error while handling user reply:", error);
