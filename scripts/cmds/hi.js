@@ -1,3 +1,5 @@
+const { application } = require("express");
+
 module.exports = {
 	config: {
 			name: "hi",
@@ -13,8 +15,9 @@ onStart: async function(){},
 onChat: async function({
 	event,
 	message,
-	getLang
+	getLang,
+	api
 }) {
-	if (event.body && event.body.toLowerCase() == "hi") return message.reply("━━━━━━━━━━━━━━━\nhello love, how can i help you?\n━━━━━━━━━━━━━━━");
+	if (event.body && event.body.toLowerCase() == "hi") return api.shareContact("━━━━━━━━━━━━━━━\nhello love, how can i help you?\n━━━━━━━━━━━━━━━");
 }
 };
