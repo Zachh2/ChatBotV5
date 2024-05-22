@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "",
-    "password": "",
+    "email": "chatbotv14@gmail.com",
+    "password": "RobloxBot22!",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -135,7 +135,7 @@
     "selfListen": false,
     "selfListenEvent": true,
     "autoMarkDelivery": false,
-    "autoReconnect": true,
+    "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   }
 }
