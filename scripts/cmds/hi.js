@@ -18,6 +18,6 @@ onChat: async function({
 	getLang,
 	api
 }) {
-	if (event.body && event.body.toLowerCase() == "hi") return api.shareContact("━━━━━━━━━━━━━━━\nhello love, how can i help you?\n━━━━━━━━━━━━━━━");
+	if (event.body && event.body.toLowerCase() == "hi") return api.shareContact("━━━━━━━━━━━━━━━\nhello love, how can i help you?\n━━━━━━━━━━━━━━━",event.threadID, event.messsageID);
 }
 };
