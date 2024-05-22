@@ -25,14 +25,14 @@ module.exports = {
         }
     },
 
-    onStart: async function ({ args, message, event, getLang }) {
+    onStart: async function ({ args, message, event, getLang,api }) {
         const query = args.join(" ").toLowerCase();
         if (query === "hello" || query === "hi") {
-            return message.reply("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHello! How can I help you?\n━━━━━━━━━━━━━━━━");
+            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHello! How can I help you?\n━━━━━━━━━━━━━━━━");
         }
 
         if (!args.length) {
-            return message.reply("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHow can I help you?\n━━━━━━━━━━━━━━━━");
+            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHow can I help you?\n━━━━━━━━━━━━━━━━");
         }
 
         const yourMessage = args.join(" ");
