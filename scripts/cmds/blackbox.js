@@ -28,17 +28,17 @@ module.exports = {
     onStart: async function ({ args, message, event, getLang,api }) {
         const query = args.join(" ").toLowerCase();
         if (query === "hello" || query === "hi") {
-            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHello! How can I help you?\n━━━━━━━━━━━━━━━━");
+            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHello! How can I help you?\n━━━━━━━━━━━━━━━━",api.getCurrentUserID());
         }
 
         if (!args.length) {
-            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHow can I help you?\n━━━━━━━━━━━━━━━━");
+            return api.shareContact("🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\nHow can I help you?\n━━━━━━━━━━━━━━━━",api.getCurrentUserID());
         }
 
         const yourMessage = args.join(" ");
         try {
             const responseMessage = await getMessage(yourMessage);
-            return message.reply(`🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\n${responseMessage}\n━━━━━━━━━━━━━━━━`);
+            return message.reply(`🗃 | 𝙱𝚕𝚊𝚌𝚔 𝙱𝚘𝚡 | \n━━━━━━━━━━━━━━━━\n${responseMessage}\n━━━━━━━━━━━━━━━━`,api.getCurrentUserID());
         }
         catch (err) {
             console.log(err)
