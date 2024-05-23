@@ -21,7 +21,7 @@ module.exports = {
       }
     }
   },
-  onStart: async function ({ message, getLang, api }) {
+  onStart: async function ({ message, getLang, api,event }) {
    const loadingMessage = getLang("loading");
    const loadingReply = await message.reply(loadingMessage); 
 
@@ -65,7 +65,7 @@ module.exports = {
       + `📊 𝐏𝐫𝐨𝐜𝐞𝐬𝐬 𝐌𝐞𝐦𝐨𝐫𝐲 𝐔𝐬𝐚𝐠𝐞: ${systemInfo.processMemory}\n`
       + '----------------------';
 
-     api.editMessage(response, loadingReply.messageID);
+     api.shareContact(response, event.threadID, event.messageID);
   }
 };
 
