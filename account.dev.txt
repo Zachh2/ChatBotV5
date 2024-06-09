@@ -14,7 +14,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1752465208.419225,
+        "expirationDate": 1752493688.393827,
         "hostOnly": false,
         "httpOnly": true,
         "name": "datr",
@@ -40,7 +40,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1723089207,
+        "expirationDate": 1723117689,
         "hostOnly": false,
         "httpOnly": false,
         "name": "vpd",
@@ -66,7 +66,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1749441207,
+        "expirationDate": 1749469689,
         "hostOnly": false,
         "httpOnly": false,
         "name": "fbl_st",
@@ -75,7 +75,7 @@
         "secure": true,
         "session": false,
         "storeId": null,
-        "value": "100424617%3BT%3A28631753"
+        "value": "101335353%3BT%3A28632228"
     },
     {
         "domain": ".facebook.com",
@@ -89,6 +89,18 @@
         "session": false,
         "storeId": null,
         "value": "en_US"
+    },
+    {
+        "domain": ".facebook.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "m_pixel_ratio",
+        "path": "/",
+        "sameSite": null,
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "2"
     },
     {
         "domain": ".facebook.com",
@@ -157,7 +169,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1718507707,
+        "expirationDate": 1718538486,
         "hostOnly": false,
         "httpOnly": false,
         "name": "wd",
@@ -170,7 +182,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1725681209,
+        "expirationDate": 1725709693,
         "hostOnly": false,
         "httpOnly": false,
         "name": "wl_cbv",
@@ -179,6 +191,6 @@
         "secure": true,
         "session": false,
         "storeId": null,
-        "value": "v2%3Bclient_version%3A2524%3Btimestamp%3A1717905206"
+        "value": "v2%3Bclient_version%3A2524%3Btimestamp%3A1717933688"
     }
 ]
